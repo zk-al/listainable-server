@@ -31,3 +31,19 @@ Response:
 }
 
 */
+
+const express = require("express");
+const router = express.Router();
+// const knex = require("knex")(require("../knexfile"));
+
+// Change to POST
+router.get("/register", (req, res) => {
+  res.status(200).send("Users: ADD user to DB");
+});
+
+// Change to POST
+router.get("/login", (req, res) => {
+  res.status(200).send("Users: LOGIN a user");
+});
+
+module.exports = router;

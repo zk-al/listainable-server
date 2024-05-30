@@ -51,3 +51,24 @@ Parameters:
     id: list item id
 
 */
+
+const express = require("express");
+const router = express.Router();
+// const knex = require("knex")(require("../knexfile"));
+
+// Change to POST
+router.get("/", (req, res) => {
+  res.status(200).send("List Page: ADD products to list");
+});
+
+// Change to PUT
+router.get("/:id", (req, res) => {
+  res.status(200).send(`List Page: EDIT products on list ${req.params.id}`);
+});
+
+// Change to DELETE
+router.get("/:id", (req, res) => {
+  res.status(200).send(`List Page: DELETE products to list ${req.params.id}`);
+});
+
+module.exports = router;

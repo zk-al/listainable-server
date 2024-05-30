@@ -18,3 +18,13 @@ Example Response:
 }
 
 */
+
+const express = require("express");
+const router = express.Router();
+// const knex = require("knex")(require("../knexfile"));
+
+router.get("/product/category", (req, res) => {
+  res.status(200).send("Home Page: GET products by category");
+});
+
+module.exports = router;
