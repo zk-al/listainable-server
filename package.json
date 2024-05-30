@@ -1,0 +1,35 @@
+{
+  "name": "listainable-sever",
+  "version": "1.0.0",
+  "description": "Listainable is a grocery list app that allows users to search for grocery items and add to a list. Users are given a average sustainability rating based on their selected products.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "dbsetup": "knex migrate:latest && knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zk-al/listainable-server.git"
+  },
+  "keywords": [
+    "List",
+    "Grocery",
+    "Express",
+    "API",
+    "Sustainability"
+  ],
+  "author": "zk-al",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zk-al/listainable-server/issues"
+  },
+  "homepage": "https://github.com/zk-al/listainable-server#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.2"
+  }
+}
