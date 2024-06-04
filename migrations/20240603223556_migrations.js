@@ -10,7 +10,9 @@ exports.up = function (knex) {
       table
         .foreign("user_list_id")
         .references("user_list")
-        .inTable("user_list");
+        .inTable("user_list")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
       table.string("username").notNullable();
       table.string("password").notNullable();
     })
@@ -26,7 +28,9 @@ exports.up = function (knex) {
       table
         .foreign("user_list_id")
         .references("user_list")
-        .inTable("user_list");
+        .inTable("user_list")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
       table.string("product_name");
       table.string("product_image");
       table.string("certifications");
