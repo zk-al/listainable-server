@@ -58,9 +58,6 @@ const knex = require("knex")(require("../knexfile"));
 
 // Change to POST
 router.post("/", async (req, res) => {
-  // res.status(200).send("List Page: ADD products to list");
-  console.log(req.body);
-
   try {
     const [newListId] = await knex("user_list").insert(req.body);
     const newListItem = await knex("user_list")
@@ -69,7 +66,6 @@ router.post("/", async (req, res) => {
 
     res.status(201).json(newListItem);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ error: "Failed to add item" });
   }
 });
