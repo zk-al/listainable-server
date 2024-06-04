@@ -4,30 +4,30 @@
  */
 exports.up = function (knex) {
   return knex.schema
-    .createTable("users", function (table) {
-      table.increments("id"); // Primary Key
-      table.integer("user_list_id").unsigned().notNullable();
-      table
-        .foreign("user_list_id")
-        .references("user_list")
-        .inTable("user_list")
-        .onUpdate("CASCADE")
-        .onDelete("CASCADE");
-      table.string("username").notNullable();
-      table.string("password").notNullable();
-    })
     .createTable("user_list", function (table) {
       table.increments("id");
       table.string("product_name");
       table.string("eco_score");
       table.bigint("quantity");
     })
+    .createTable("users", function (table) {
+      table.increments("id"); // Primary Key
+      table.integer("user_list_id").unsigned().notNullable();
+      table
+        .foreign("user_list_id")
+        .references("id")
+        .inTable("user_list")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
+      table.string("username").notNullable();
+      table.string("password").notNullable();
+    })
     .createTable("products", function (table) {
       table.increments("id");
       table.integer("user_list_id").unsigned().notNullable();
       table
         .foreign("user_list_id")
-        .references("user_list")
+        .references("id")
         .inTable("user_list")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
