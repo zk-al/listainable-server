@@ -24,7 +24,7 @@ exports.up = function (knex) {
     })
     .createTable("products", function (table) {
       table.increments("id");
-      table.integer("user_list_id").unsigned().notNullable();
+      table.integer("user_list_id").unsigned();
       table
         .foreign("user_list_id")
         .references("id")
