@@ -71,8 +71,16 @@ router.post("/", async (req, res) => {
 });
 
 // Change to PUT
-router.get("/:id", (req, res) => {
+router.put("/:id", async (req, res) => {
   res.status(200).send(`List Page: EDIT products on list ${req.params.id}`);
+  console.log(req.params.id);
+  try {
+    await knex("user_list")
+      .where({ id: req.params.id })
+      .update({ quantity: req.body.quantity });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to update" });
+  }
 });
 
 // Change to DELETE
