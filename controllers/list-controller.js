@@ -1,5 +1,14 @@
 const knex = require("knex")(require("../knexfile"));
 
+const getList = async (req, res) => {
+  try {
+    const userList = await knex("user_list");
+    res.status(200).json(userList);
+  } catch (error) {
+    res.status(500).json({ error: "Failet to fetch user list" });
+  }
+};
+
 const addItem = async (req, res) => {
   try {
     const [newListId] = await knex("user_list").insert(req.body);
@@ -33,4 +42,4 @@ const deleteItem = async (req, res) => {
   }
 };
 
-module.exports = { addItem, editItem, deleteItem };
+module.exports = { getList, addItem, editItem, deleteItem };
