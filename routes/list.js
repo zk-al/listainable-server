@@ -72,8 +72,6 @@ router.post("/", async (req, res) => {
 
 // Change to PUT
 router.put("/:id", async (req, res) => {
-  res.status(200).send(`List Page: EDIT products on list ${req.params.id}`);
-  console.log(req.params.id);
   try {
     await knex("user_list")
       .where({ id: req.params.id })
@@ -84,8 +82,15 @@ router.put("/:id", async (req, res) => {
 });
 
 // Change to DELETE
-router.get("/:id", (req, res) => {
-  res.status(200).send(`List Page: DELETE products to list ${req.params.id}`);
+router.delete("/:id", async (req, res) => {
+  // res.status(200).send(`List Page: DELETE products to list ${req.params.id}`);
+
+  try {
+    await knex("user_list").where({ id: req.params.id }).del();
+    res.status(204).end();
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete" });
+  }
 });
 
 module.exports = router;
