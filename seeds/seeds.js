@@ -313,6 +313,8 @@ const lists = [
   { id: 3, user_id: 3 },
 ];
 
+const listProducts = [{ id: 1, list_id: 1, product_id: 1, quantity: 1 }];
+
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex("users").del();
@@ -321,4 +323,6 @@ exports.seed = async function (knex) {
   await knex("products").insert(products);
   await knex("lists").del();
   await knex("lists").insert(lists);
+  await knex("list_products").del();
+  await knex("list_products").insert(listProducts);
 };
