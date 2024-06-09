@@ -6,8 +6,7 @@
 const products = [
   {
     id: 1,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/400/400/4000000010001.jpg",
+    product_image: "assets/images/plant-based/almond-milk.webp",
     product_name: "Almond Milk",
     certifications: JSON.stringify([
       "Non-GMO Project Verified",
@@ -26,8 +25,7 @@ const products = [
   },
   {
     id: 2,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/500/500/5000000010002.jpg",
+    product_image: "assets/images/plant-based/tofu.webp",
     product_name: "Tofu",
     certifications: JSON.stringify([
       "USDA Organic",
@@ -44,8 +42,7 @@ const products = [
   },
   {
     id: 3,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/600/600/6000000010003.jpg",
+    product_image: "assets/images/plant-based/soy-yogurt.webp",
     product_name: "Soy Yogurt",
     certifications: JSON.stringify([
       "Certified Vegan",
@@ -58,8 +55,7 @@ const products = [
   },
   {
     id: 4,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/700/700/7000000010004.jpg",
+    product_image: "assets/images/plant-based/veggie-burgers.webp",
     product_name: "Veggie Burgers",
     certifications: JSON.stringify(["USDA Organic", "Certified Vegan"]),
     ingredients: JSON.stringify([
@@ -74,8 +70,7 @@ const products = [
   },
   {
     id: 5,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/800/800/8000000010005.jpg",
+    product_image: "assets/images/plant-based/oat-milk.webp",
     product_name: "Oat Milk",
     certifications: JSON.stringify(["USDA Organic", "Certified Gluten-Free"]),
     ingredients: JSON.stringify([
@@ -90,8 +85,7 @@ const products = [
   },
   {
     id: 6,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/320/320/3200000010010.jpg",
+    product_image: "assets/images/vegetables/carrots.webp",
     product_name: "Organic Carrots",
     certifications: JSON.stringify(["USDA Organic"]),
     ingredients: JSON.stringify(["Organic Carrots"]),
@@ -101,8 +95,7 @@ const products = [
   },
   {
     id: 7,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/430/430/4300000010011.jpg",
+    product_image: "assets/images/vegetables/broccoli-florets.webp",
     product_name: "Broccoli Florets",
     certifications: JSON.stringify(["USDA Organic"]),
     ingredients: JSON.stringify(["Organic Broccoli"]),
@@ -112,8 +105,7 @@ const products = [
   },
   {
     id: 8,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/540/540/5400000010012.jpg",
+    product_image: "assets/images/vegetables/organic-kale.jpg",
     product_name: "Organic Kale",
     certifications: JSON.stringify(["USDA Organic"]),
     ingredients: JSON.stringify(["Organic Kale"]),
@@ -123,8 +115,7 @@ const products = [
   },
   {
     id: 9,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/650/650/6500000010013.jpg",
+    product_image: "assets/images/vegetables/red-bell-pepper.webp",
     product_name: "Red Bell Peppers",
     certifications: JSON.stringify(["USDA Organic"]),
     ingredients: JSON.stringify(["Organic Red Bell Peppers"]),
@@ -134,8 +125,7 @@ const products = [
   },
   {
     id: 10,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/760/760/7600000010014.jpg",
+    product_image: "assets/images/vegetables/cucumber.webp",
     product_name: "Cucumbers",
     certifications: JSON.stringify(["USDA Organic"]),
     ingredients: JSON.stringify(["Organic Cucumbers"]),
@@ -145,8 +135,7 @@ const products = [
   },
   {
     id: 11,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/910/910/9100000010020.jpg",
+    product_image: "assets/images/frozen/frozen-pizza.webp",
     product_name: "Frozen Pizza",
     certifications: JSON.stringify(["Certified Gluten-Free"]),
     ingredients: JSON.stringify([
@@ -161,8 +150,7 @@ const products = [
   },
   {
     id: 12,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/920/920/9200000010021.jpg",
+    product_image: "assets/images/frozen/frozen-peas.webp",
     product_name: "Frozen Peas",
     certifications: JSON.stringify(["USDA Organic"]),
     ingredients: JSON.stringify(["Organic Peas"]),
@@ -172,8 +160,7 @@ const products = [
   },
   {
     id: 13,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/930/930/9300000010022.jpg",
+    product_image: "assets/images/frozen/frozen-fries.webp",
     product_name: "Frozen French Fries",
     certifications: JSON.stringify(["Non-GMO Project Verified"]),
     ingredients: JSON.stringify(["Potatoes", "Canola Oil", "Salt"]),
@@ -183,8 +170,7 @@ const products = [
   },
   {
     id: 14,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/940/940/9400000010023.jpg",
+    product_image: "assets/images/frozen/frozen-spring-rolls.webp",
     product_name: "Vegetable Spring Rolls",
     certifications: JSON.stringify(["Certified Vegan"]),
     ingredients: JSON.stringify([
@@ -199,8 +185,7 @@ const products = [
   },
   {
     id: 15,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/950/950/9500000010024.jpg",
+    product_image: "assets/images/frozen/frozen-burgers.webp",
     product_name: "Frozen Burger Patties",
     certifications: JSON.stringify(["Non-GMO Project Verified"]),
     ingredients: JSON.stringify(["Beef", "Salt", "Pepper"]),
@@ -210,8 +195,7 @@ const products = [
   },
   {
     id: 16,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/401/401/4010000010025.jpg",
+    product_image: "assets/images/snacks/potato-chips.webp",
     product_name: "Potato Chips",
     certifications: JSON.stringify([
       "Non-GMO Project Verified",
@@ -224,8 +208,7 @@ const products = [
   },
   {
     id: 17,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/402/402/4020000010026.jpg",
+    product_image: "assets/images/snacks/pretzels.webp",
     product_name: "Pretzels",
     certifications: JSON.stringify([
       "Non-GMO Project Verified",
@@ -238,8 +221,7 @@ const products = [
   },
   {
     id: 18,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/403/403/4030000010027.jpg",
+    product_image: "assets/images/snacks/cookies.webp",
     product_name: "Chocolate Chip Cookies",
     certifications: JSON.stringify([
       "Non-GMO Project Verified",
@@ -258,8 +240,7 @@ const products = [
   },
   {
     id: 19,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/404/404/4040000010028.jpg",
+    product_image: "assets/images/snacks/popcorn.webp",
     product_name: "Popcorn",
     certifications: JSON.stringify([
       "Non-GMO Project Verified",
@@ -272,8 +253,7 @@ const products = [
   },
   {
     id: 20,
-    product_image:
-      "https://static.openfoodfacts.org/images/products/405/405/4050000010029.jpg",
+    product_image: "assets/images/snacks/granola-bars.webp",
     product_name: "Granola Bars",
     certifications: JSON.stringify([
       "USDA Organic",
