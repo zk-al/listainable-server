@@ -7,6 +7,7 @@ const getList = async (req, res) => {
         "list_products.id",
         "list_products.quantity",
         "products.product_name",
+        "products.product_image",
         "products.eco_score"
       )
       .join("products", "list_products.product_id", "=", "products.id");
