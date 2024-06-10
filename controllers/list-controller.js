@@ -17,12 +17,29 @@ const getList = async (req, res) => {
   }
 };
 
+const getListTable = async (req, res) => {
+  try {
+    const tableData = await knex("list_products")
+      .where({ list_id: req.params.id })
+      .select("*");
+    res.status(200).json(tableData);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to add item" });
+  }
+};
+
 const addItem = async (req, res) => {
   try {
-    const [newListId] = await knex("list_products").insert(req.body);
-    const newListItem = await knex("list_products")
-      .where({ id: newListId })
-      .first();
+    const newData = {
+      list_id: req.params.id,
+      product_id: req.body.productId,
+      quantity: req.body.quantity,
+    };
+
+    console.log(req.body.quatity);
+
+    await knex("list_products").insert(newData);
+    const newListItem = await knex("list_products").where(newData).first();
 
     res.status(201).json(newListItem);
   } catch (error) {
@@ -50,4 +67,4 @@ const deleteItem = async (req, res) => {
   }
 };
 
-module.exports = { getList, addItem, editItem, deleteItem };
+module.exports = { getList, getListTable, addItem, editItem, deleteItem };
